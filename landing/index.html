@@ -256,66 +256,109 @@
 
     <!-- Pricing Section
          STRIPE SETUP:
-         1. Go to Stripe Dashboard > Payment Links
-         2. Create a Payment Link for each tier (Pro $29/mo, Team $99/mo)
-         3. Set success_url to: https://YOUR_DOMAIN/success.html
-         4. Set cancel_url to: https://YOUR_DOMAIN/cancel.html
-         5. Replace STRIPE_PAYMENT_LINK_PRO and STRIPE_PAYMENT_LINK_TEAM below
+         1. Create Payment Links in Stripe for each tier + billing cycle:
+            - Pro Monthly ($19/mo), Pro Lifetime ($149)
+            - Team Monthly ($49/mo), Team Lifetime ($349)
+         2. Set success_url to: https://YOUR_DOMAIN/success.html
+         3. Set cancel_url to: https://YOUR_DOMAIN/cancel.html
+         4. Replace the STRIPE_* placeholders below with your payment links
     -->
     <section class="pricing" id="pricing">
         <div class="container">
             <h2 class="section-title">Simple, <span class="gradient-text">Transparent Pricing</span></h2>
             <p class="section-subtitle">Start free. Upgrade when your team falls in love.</p>
-            <div class="pricing-grid">
-                <div class="pricing-card" id="pricing-free">
-                    <div class="pricing-tier">Free</div>
-                    <div class="pricing-price">$0<span>/mo</span></div>
-                    <div class="pricing-desc">Perfect for trying it out</div>
+
+            <!-- Billing Toggle -->
+            <div class="pricing-toggle">
+                <span class="toggle-label" id="label-monthly">Monthly</span>
+                <button class="toggle-switch" id="billingToggle" onclick="toggleBilling()"
+                    aria-label="Toggle billing period">
+                    <span class="toggle-knob"></span>
+                </button>
+                <span class="toggle-label" id="label-lifetime">Lifetime <span class="toggle-save">Save
+                        40%+</span></span>
+            </div>
+
+            <div class="pricing-grid pricing-grid-4">
+                <!-- Starter -->
+                <div class="pricing-card" id="pricing-starter">
+                    <div class="pricing-tier">Starter</div>
+                    <div class="pricing-price">$0<span class="price-period">/mo</span></div>
+                    <div class="pricing-desc">Try it on a side project</div>
                     <ul class="pricing-features">
-                        <li>2 repositories</li>
-                        <li>AI stand-up reports</li>
-                        <li>Basic board sync</li>
-                        <li>Health score</li>
+                        <li>1 repository</li>
+                        <li>AI activity analysis</li>
+                        <li>Basic health score</li>
+                        <li class="disabled">Board sync</li>
                         <li class="disabled">Tech debt sentinel</li>
                         <li class="disabled">Sprint narrative</li>
-                        <li class="disabled">Slack/Discord integration</li>
+                        <li class="disabled">GitHub App</li>
                     </ul>
-                    <a href="success.html" class="btn btn-outline" id="btn-free">Get Started Free</a>
+                    <a href="success.html" class="btn btn-outline" id="btn-starter">Get Started Free</a>
+                    <div class="pricing-delivery">🐳 Docker (self-hosted)</div>
                 </div>
+
+                <!-- Pro -->
                 <div class="pricing-card popular" id="pricing-pro">
                     <div class="popular-badge">Most Popular</div>
                     <div class="pricing-tier">Pro</div>
-                    <div class="pricing-price">$29<span>/mo</span></div>
-                    <div class="pricing-desc">For growing engineering teams</div>
+                    <div class="pricing-price" data-monthly="$19" data-lifetime="$149">$19<span
+                            class="price-period">/mo</span></div>
+                    <div class="pricing-desc">For individual devs &amp; small teams</div>
                     <ul class="pricing-features">
-                        <li>10 repositories</li>
+                        <li>5 repositories</li>
                         <li>AI stand-up reports</li>
                         <li>Smart board sync (95% accuracy)</li>
                         <li>Health score + velocity forecast</li>
                         <li>Tech debt sentinel</li>
                         <li>AI sprint narratives</li>
-                        <li class="disabled">Slack/Discord integration</li>
+                        <li class="disabled">GitHub App integration</li>
                     </ul>
-                    <!-- TODO: Replace with your Stripe Payment Link -->
-                    <a href="STRIPE_PAYMENT_LINK_PRO" class="btn btn-primary btn-full" id="btn-pro" data-tier="pro"
-                        data-price="29">Start Free Trial →</a>
+                    <!-- TODO: Replace with Stripe Payment Links (monthly + lifetime) -->
+                    <a href="STRIPE_PRO_MONTHLY" class="btn btn-primary btn-full" id="btn-pro"
+                        data-monthly-href="STRIPE_PRO_MONTHLY" data-lifetime-href="STRIPE_PRO_LIFETIME">Start Free Trial
+                        →</a>
+                    <div class="pricing-delivery">🐳 Docker (self-hosted)</div>
                 </div>
+
+                <!-- Team -->
                 <div class="pricing-card" id="pricing-team">
                     <div class="pricing-tier">Team</div>
-                    <div class="pricing-price">$99<span>/mo</span></div>
-                    <div class="pricing-desc">For serious engineering orgs</div>
+                    <div class="pricing-price" data-monthly="$49" data-lifetime="$349">$49<span
+                            class="price-period">/mo</span></div>
+                    <div class="pricing-desc">For engineering teams that ship fast</div>
                     <ul class="pricing-features">
                         <li>Unlimited repositories</li>
                         <li>Everything in Pro</li>
-                        <li>Slack & Discord integration</li>
-                        <li>Auto-generated refactor tickets</li>
+                        <li>GitHub App — auto PR analysis</li>
+                        <li>Slack &amp; Discord integration</li>
                         <li>Burnout detection alerts</li>
                         <li>Priority support</li>
                         <li>Custom LLM provider</li>
                     </ul>
-                    <!-- TODO: Replace with your Stripe Payment Link -->
-                    <a href="STRIPE_PAYMENT_LINK_TEAM" class="btn btn-outline" id="btn-team" data-tier="team"
-                        data-price="99">Subscribe →</a>
+                    <!-- TODO: Replace with Stripe Payment Links (monthly + lifetime) -->
+                    <a href="STRIPE_TEAM_MONTHLY" class="btn btn-primary btn-full" id="btn-team"
+                        data-monthly-href="STRIPE_TEAM_MONTHLY" data-lifetime-href="STRIPE_TEAM_LIFETIME">Subscribe
+                        →</a>
+                    <div class="pricing-delivery">🐳 Docker + 🔌 GitHub App</div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="pricing-card" id="pricing-enterprise">
+                    <div class="pricing-tier">Enterprise</div>
+                    <div class="pricing-price enterprise-price">Custom</div>
+                    <div class="pricing-desc">For orgs with compliance needs</div>
+                    <ul class="pricing-features">
+                        <li>Unlimited everything</li>
+                        <li>On-premise deployment</li>
+                        <li>Air-gapped network support</li>
+                        <li>SSO / SAML integration</li>
+                        <li>Custom LLM (bring your own)</li>
+                        <li>Dedicated support engineer</li>
+                        <li>Annual license agreement</li>
+                    </ul>
+                    <a href="mailto:sales@agileflow.dev" class="btn btn-outline" id="btn-enterprise">Contact Sales →</a>
+                    <div class="pricing-delivery">🏢 On-Premise (annual license)</div>
                 </div>
             </div>
         </div>
@@ -392,6 +435,34 @@
             const btn = document.getElementById('copyBtn');
             btn.textContent = 'Copied!';
             setTimeout(() => btn.textContent = 'Copy', 2000);
+        }
+
+        // Billing toggle (monthly <-> lifetime)
+        let isLifetime = false;
+
+        function toggleBilling() {
+            isLifetime = !isLifetime;
+            const toggle = document.getElementById('billingToggle');
+            const labelMonthly = document.getElementById('label-monthly');
+            const labelLifetime = document.getElementById('label-lifetime');
+
+            toggle.classList.toggle('active', isLifetime);
+            labelMonthly.classList.toggle('active', !isLifetime);
+            labelLifetime.classList.toggle('active', isLifetime);
+
+            // Update prices
+            document.querySelectorAll('.pricing-price[data-monthly]').forEach(el => {
+                if (isLifetime) {
+                    el.innerHTML = el.dataset.lifetime + '<span class="price-period"> one-time</span>';
+                } else {
+                    el.innerHTML = el.dataset.monthly + '<span class="price-period">/mo</span>';
+                }
+            });
+
+            // Update Stripe payment links
+            document.querySelectorAll('[data-monthly-href]').forEach(btn => {
+                btn.href = isLifetime ? btn.dataset.lifetimeHref : btn.dataset.monthlyHref;
+            });
         }
 
         // Intersection Observer for fade-in animations

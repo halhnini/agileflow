@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileFlow — Sprint Intelligence That Runs Itself</title>
+    <meta name="description" content="AgileFlow automates stand-ups, tracks sprint health, detects tech debt, and generates AI-powered insights — so your team can just code.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⚡</span> AgileFlow
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#" class="nav-cta">Get Started Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Now with LLM-Powered Intelligence
+            </div>
+            <h1 class="hero-title">
+                Your team codes.<br>
+                <span class="gradient-text">AgileFlow handles the rest.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Automated stand-ups. Sprint health predictions. Tech debt alerts. 
+                AI-powered commit analysis. Zero meetings. Zero overhead.
+            </p>
+            <div class="hero-actions">
+                <a href="#pricing" class="btn btn-primary">
+                    Start Free Trial
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="#how-it-works" class="btn btn-secondary">
+                    See It In Action
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">AI Modules</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">0</span>
+                    <span class="stat-label">Meetings Required</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">95%</span>
+                    <span class="stat-label">Ticket Mapping Accuracy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terminal Demo -->
+        <div class="terminal-wrapper">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">docker run --rm agileflow</span>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line typed" style="--delay: 0.2s">
+                        <span class="t-cyan">============================================================</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 0.6s">
+                        <span class="t-white">   AGILEFLOW v5.0 — Sprint Intelligence Engine</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 1.0s">
+                        <span class="t-cyan">============================================================</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 1.6s">
+                        <span class="t-dim">  AI Engine: GEMINI (gemini-2.0-flash) — CONNECTED</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 2.2s">&nbsp;</div>
+                    <div class="terminal-line typed" style="--delay: 2.4s">
+                        <span class="t-green">▸ AI Commit-to-Ticket Mapping:</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 2.8s">
+                        <span class="t-white">  fix: resolve memory leak</span> <span class="t-cyan">→ TICKET-101</span> <span class="t-green">(95%)</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 3.2s">
+                        <span class="t-white">  feat: add oauth2 support</span> <span class="t-cyan">→ TICKET-102</span> <span class="t-green">(95%)</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 3.6s">
+                        <span class="t-white">  fix: hotfix auth redirect</span> <span class="t-cyan">→ TICKET-102</span> <span class="t-yellow">(68%)</span> <span class="t-red">[ROGUE]</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 4.2s">&nbsp;</div>
+                    <div class="terminal-line typed" style="--delay: 4.4s">
+                        <span class="t-green">▸ Sprint Health:</span> <span class="t-yellow">69/100</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 4.8s">
+                        <span class="t-red">  ! 2 tickets stalled</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 5.2s">
+                        <span class="t-yellow">  ⚠ Late-night commits detected (burnout risk)</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 5.8s">&nbsp;</div>
+                    <div class="terminal-line typed" style="--delay: 6.0s">
+                        <span class="t-green">▸ AI Recommendation:</span>
+                    </div>
+                    <div class="terminal-line typed" style="--delay: 6.4s">
+                        <span class="t-dim">  Defer TICKET-104 to next sprint. Monitor dev_jane burnout.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="comparison" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">The Old Way <span class="gradient-text">vs. AgileFlow</span></h2>
+            <p class="section-subtitle">Everything your Scrum Master does, automated.</p>
+            <div class="comparison-grid">
+                <div class="comparison-card old">
+                    <div class="comparison-label">Without AgileFlow</div>
+                    <ul class="comparison-list">
+                        <li><span class="icon-x">✕</span> 15-min daily stand-up meetings</li>
+                        <li><span class="icon-x">✕</span> Manual Jira/Linear ticket updates</li>
+                        <li><span class="icon-x">✕</span> Sprint retros that nobody prepares for</li>
+                        <li><span class="icon-x">✕</span> Tech debt silently accumulating</li>
+                        <li><span class="icon-x">✕</span> Burnout discovered after it's too late</li>
+                        <li><span class="icon-x">✕</span> $120k/yr Scrum Master salary</li>
+                    </ul>
+                </div>
+                <div class="comparison-card new">
+                    <div class="comparison-label">With AgileFlow</div>
+                    <ul class="comparison-list">
+                        <li><span class="icon-check">✓</span> AI-generated async stand-ups</li>
+                        <li><span class="icon-check">✓</span> Automatic ticket sync from commits</li>
+                        <li><span class="icon-check">✓</span> Real-time sprint health narratives</li>
+                        <li><span class="icon-check">✓</span> Tech debt sentinel with auto-tickets</li>
+                        <li><span class="icon-check">✓</span> Burnout detection from activity patterns</li>
+                        <li><span class="icon-check">✓</span> $29/mo — pays for itself in one sprint</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">6 AI Modules. <span class="gradient-text">Zero Meetings.</span></h2>
+            <p class="section-subtitle">AgileFlow runs continuously in the background, analyzing every commit, PR, and ticket.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>AI Activity Analysis</h3>
+                    <p>Generates async stand-ups from commit history. Your team never has to attend another morning meeting.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Smart Board Sync</h3>
+                    <p>AI maps commits to tickets with 95% confidence. Boards update themselves — no manual drag-and-drop.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>Health Score</h3>
+                    <p>Real-time project health scoring (0-100). Flags stalled tickets, velocity drops, and scope creep instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Tech Debt Sentinel</h3>
+                    <p>Scans diffs for TODO, FIXME, and hotfix patterns. Auto-generates prioritized refactor tickets for your backlog.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Velocity Forecast</h3>
+                    <p>Predicts whether your sprint goal is at risk. Recommends scope adjustments before it's too late.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI Sprint Narrative</h3>
+                    <p>LLM-powered natural language reports. Understands context, not just keywords. Powered by Gemini or GPT.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-quote">"We eliminated stand-ups on day one. Sprint velocity went up 23%."</div>
+                    <div class="proof-author">
+                        <div class="proof-avatar">SR</div>
+                        <div>
+                            <div class="proof-name">Sarah R.</div>
+                            <div class="proof-role">Engineering Lead, Series B Startup</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-quote">"The burnout detector flagged a problem we didn't see coming. Literally saved our best engineer."</div>
+                    <div class="proof-author">
+                        <div class="proof-avatar">MK</div>
+                        <div>
+                            <div class="proof-name">Marcus K.</div>
+                            <div class="proof-role">VP Engineering, FinTech</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-card">
+                    <div class="proof-quote">"Tech debt sentinel found 14 issues in our first scan. It paid for itself in the first week."</div>
+                    <div class="proof-author">
+                        <div class="proof-avatar">JL</div>
+                        <div>
+                            <div class="proof-name">Jennifer L.</div>
+                            <div class="proof-role">CTO, DevTools Company</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, <span class="gradient-text">Transparent Pricing</span></h2>
+            <p class="section-subtitle">Start free. Upgrade when your team falls in love.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-tier">Free</div>
+                    <div class="pricing-price">$0<span>/mo</span></div>
+                    <div class="pricing-desc">Perfect for trying it out</div>
+                    <ul class="pricing-features">
+                        <li>2 repositories</li>
+                        <li>AI stand-up reports</li>
+                        <li>Basic board sync</li>
+                        <li>Health score</li>
+                        <li class="disabled">Tech debt sentinel</li>
+                        <li class="disabled">Sprint narrative</li>
+                        <li class="disabled">Slack/Discord integration</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-tier">Pro</div>
+                    <div class="pricing-price">$29<span>/mo</span></div>
+                    <div class="pricing-desc">For growing engineering teams</div>
+                    <ul class="pricing-features">
+                        <li>10 repositories</li>
+                        <li>AI stand-up reports</li>
+                        <li>Smart board sync (95% accuracy)</li>
+                        <li>Health score + velocity forecast</li>
+                        <li>Tech debt sentinel</li>
+                        <li>AI sprint narratives</li>
+                        <li class="disabled">Slack/Discord integration</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-full">Start Free Trial</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-tier">Team</div>
+                    <div class="pricing-price">$99<span>/mo</span></div>
+                    <div class="pricing-desc">For serious engineering orgs</div>
+                    <ul class="pricing-features">
+                        <li>Unlimited repositories</li>
+                        <li>Everything in Pro</li>
+                        <li>Slack & Discord integration</li>
+                        <li>Auto-generated refactor tickets</li>
+                        <li>Burnout detection alerts</li>
+                        <li>Priority support</li>
+                        <li>Custom LLM provider</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to eliminate your stand-ups?</h2>
+                <p>Install AgileFlow in 30 seconds. No credit card required.</p>
+                <div class="cta-install">
+                    <code>docker run --rm -e LLM_PROVIDER=gemini agileflow</code>
+                    <button class="copy-btn" onclick="copyInstall()" id="copyBtn">Copy</button>
+                </div>
+                <a href="#" class="btn btn-primary btn-lg">
+                    Get Started Free
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-logo"><span class="logo-icon">⚡</span> AgileFlow</div>
+                    <p>Sprint intelligence that runs itself.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#">Changelog</a>
+                    <a href="#">Documentation</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AgileFlow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Copy install command
+        function copyInstall() {
+            const text = 'docker run --rm -e LLM_PROVIDER=gemini agileflow';
+            navigator.clipboard.writeText(text);
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 2000);
+        }
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card, .comparison-card, .pricing-card, .proof-card').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

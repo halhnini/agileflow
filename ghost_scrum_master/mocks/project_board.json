@@ -1,0 +1,37 @@
+[
+    {
+        "id": "TICKET-101",
+        "title": "Optimize data processing",
+        "status": "In Progress",
+        "assignee": "dev_jane",
+        "description": "The current data processor is consuming too much memory."
+    },
+    {
+        "id": "TICKET-102",
+        "title": "Implement OAuth2",
+        "status": "In Progress",
+        "assignee": "dev_bob",
+        "description": "We need to support OAuth2 for external integrations."
+    },
+    {
+        "id": "TICKET-103",
+        "title": "Setup CI/CD pipeline",
+        "status": "In Progress",
+        "assignee": "dev_jane",
+        "description": "We need to automate the build process."
+    },
+    {
+        "id": "TICKET-104",
+        "title": "Write API documentation",
+        "status": "Todo",
+        "assignee": "dev_bob",
+        "description": "Document all REST API endpoints."
+    },
+    {
+        "id": "TICKET-105",
+        "title": "Performance testing",
+        "status": "Done",
+        "assignee": "dev_jane",
+        "description": "Run load tests on the API."
+    }
+]

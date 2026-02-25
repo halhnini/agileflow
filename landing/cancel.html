@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgileFlow — Changed Your Mind?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0f;
+            color: #f1f1f4;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 560px;
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: #9a9ab0;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .reasons {
+            text-align: left;
+            background: #16161f;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 28px;
+        }
+
+        .reasons h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #6366f1;
+            margin-bottom: 16px;
+        }
+
+        .reasons li {
+            color: #9a9ab0;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            margin-left: 16px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.35);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            color: #f1f1f4;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .help {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: #5a5a72;
+        }
+
+        .help a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="icon">🤔</div>
+        <h1>Changed your mind?</h1>
+        <p>No worries — AgileFlow will be here when you're ready. You can always start with the free tier first.</p>
+
+        <div class="reasons">
+            <h3>Why teams choose AgileFlow</h3>
+            <ul>
+                <li>Saves 3+ hours per week on status meetings</li>
+                <li>Catches tech debt before it becomes a crisis</li>
+                <li>Burnout detection that actually works</li>
+                <li>Pays for itself in the first sprint</li>
+                <li>30-day money-back guarantee</li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <a href="index.html#pricing" class="btn btn-primary">Try Free Tier →</a>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+        <div class="help">
+            Questions? <a href="mailto:support@agileflow.dev">support@agileflow.dev</a>
+        </div>
+    </div>
+</body>
+
+</html>
